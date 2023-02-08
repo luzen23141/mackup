@@ -1,5 +1,6 @@
 # Path to your dotfiles.
-export DOTFILES=$HOME/dotfiles
+export DOTFILES_FOLDER_NAME="dotfiles"
+export DOTFILES=$HOME/$DOTFILES_FOLDER_NAME
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -38,7 +39,7 @@ source $ZSH/oh-my-zsh.sh
 source $DOTFILES/plugins/powerlevel10k/powerlevel10k.zsh-theme
 source $DOTFILES/aliasConfig.sh
 source $DOTFILES/p10k.zsh
-source $DOTFILES/plugins/fsh/fast-syntax-highlighting.plugin.zsh
+source $DOTFILES/plugins/fsh/F-Sy-H.plugin.zsh
 source $DOTFILES/plugins/zshAutosuggestions/zsh-autosuggestions.zsh
 
 # User configuration
@@ -49,6 +50,7 @@ export TERM="xterm-256color"
 export LC_ALL=en_US.UTF-8
 # export LANG=en_US.UTF-8
 
+export PATH="/usr/local/sbin:$PATH"
 
 # 以下還需要再檢查
 # ----------------------------------------------------------------
@@ -63,4 +65,3 @@ if test -f "$FILE"; then
     . /usr/share/autojump/autojump.sh
 fi
 
-export PATH="/usr/local/sbin:$PATH"

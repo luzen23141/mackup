@@ -15,7 +15,6 @@ git submodule update
 # Check for Homebrew and install if we don't have it
 if test ! "$(which brew)"; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-# 感觉用不到
   echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
@@ -64,6 +63,9 @@ do
   dst="$HOME/.$(basename "${src%.*}")"
   link_file "$src" "$dst"
 done
+
+# 增加建立Mackup prviate設定檔
+create_mackup_private_setting
 
 # 視情況開啟
 mackup -n restore

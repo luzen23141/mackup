@@ -1,1 +1,5 @@
 .idea
+Brewfile.lock.json
+.env.sh
+private
+autoLink/mackup/mackup.symlink/private-setting.cfg

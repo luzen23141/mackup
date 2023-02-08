@@ -3,7 +3,6 @@
 
 # 系統
 alias es="exec $SHELL"
-alias s="cd ~/bashconfig/sshAlias && sh"
 
 # brew
 alias bu="brew update && brew upgrade && brew cleanup && brew doctor"
@@ -83,7 +82,6 @@ function polling () {
 
 
 # 程式資料夾捷徑
-
 alias phpstorm="/usr/local/bin/phpstorm"
 alias goland="/usr/local/bin/goland"
 alias datagrip="/usr/local/bin/datagrip"
@@ -94,5 +92,4 @@ alias eth="curl https://min-api.cryptocompare.com/data/price\?fsym=ETH\&tsyms=US
 
 alias pa="php artisan"
 
-
-
+alias s="cd $DOTFILES/private/sshAlias && sh"
