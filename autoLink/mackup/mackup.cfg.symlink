@@ -1,0 +1,17 @@
+[storage]
+engine = icloud
+directory = mackup
+
+# 指定要同步的應用程式
+[applications_to_sync]
+iterm2
+brave
+ssh-key
+mosaic
+sublime-text
+git-setting
+bartender
+cleanShot
+istat-menus
+keepingyouawake
+telegram_macos
