@@ -11,8 +11,14 @@ tap "stripe/stripe-cli"
 brew "openssl@1.1"
 # Shell extension to jump to frequently used directories
 brew "autojump"
+# Asynchronous DNS library
+brew "c-ares"
 # Dependency Manager for PHP
 brew "composer"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
+# Monitor a directory for changes and run a shell command
+brew "fswatch"
 # Distributed revision control system
 brew "git"
 # Improved top (interactive process viewer)
@@ -33,6 +39,8 @@ brew "redis"
 brew "rename"
 # User interface to the TELNET protocol
 brew "telnet"
+# Programmatically correct mistyped console commands
+brew "thefuck"
 # CLI tool that moves files or folder to the trash
 brew "trash"
 # Display directories as trees (with optional color/HTML output)
@@ -79,4 +87,3 @@ cask "surfshark"
 cask "telegram"
 # Desktop client for Telegram messenger
 cask "telegram-desktop"
-mas "LINE", id: 539883307
