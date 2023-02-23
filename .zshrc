@@ -34,14 +34,12 @@ export LC_ALL=en_US.UTF-8
 
 export PATH="/usr/local/sbin:$PATH"
 
-
-
 # export PATH=$(dirname $0):${PATH}
 export PATH="$DOTFILES/plugins/gitOpen:$PATH"
 
 
 # 安裝theFuck
-eval $(thefuck --alias)
+# eval $(thefuck --alias)
 
 # plugins=(git-open)
 
