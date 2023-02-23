@@ -10,3 +10,6 @@
 [submodule "plugins/ohmyzsh"]
 	path = plugins/ohmyzsh
 	url = https://github.com/ohmyzsh/ohmyzsh.git
+[submodule "plugins/gitOpen"]
+	path = plugins/gitOpen
+	url = https://github.com/paulirish/git-open.git

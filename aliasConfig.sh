@@ -8,6 +8,18 @@ alias es="exec $SHELL"
 alias bu="brew update && brew upgrade && brew cleanup && brew doctor"
 alias buc="brew update && brew upgrade --cask --greedy"
 
+# 防呆
+# 防止誤刪檔案
+alias cp='cp -i'
+alias rm='rm -i'
+alias mv='mv -i'
+alias ln='ln -i'
+
+# 好用
+alias grep='grep --color=auto'
+
+
+
 # golang
 alias gof="go fmt ./..."
 alias gov="go vet ./..."
@@ -56,6 +68,12 @@ alias composer74="/usr/local/opt/php@7.4/bin/php /usr/local/bin/composer"
 alias php80="/usr/local/opt/php@8.0/bin/php"
 alias pecl80="/usr/local/opt/php@8.0/bin/pecl"
 alias composer80="/usr/local/opt/php@8.0/bin/php /usr/local/bin/composer"
+
+# hyperf框架多版本
+alias hy80="/usr/local/opt/php@8.0/bin/php bin/hyperf.php"
+alias hy73="/usr/local/opt/php@7.3/bin/php bin/hyperf.php"
+alias hy74="/usr/local/opt/php@7.4/bin/php bin/hyperf.php"
+alias hy="php bin/hyperf.php"
 
 function gcp() {
 	git commit -am $1 && git push -u origin "$(git rev-parse --abbrev-ref HEAD)"

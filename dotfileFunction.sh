@@ -1,13 +1,13 @@
 #!/bin/sh
 
 link_file () {
+  # shellcheck disable=SC2039
   local src=$1 dst=$2
-
-  local overwrite_all=false
-  local backup_all=true
-  local skip_all=false
-  local overwrite= backup= skip=
-  local action=
+  # shellcheck disable=SC2039
+  local overwrite_all=false backup_all=true skip_all=false
+  # shellcheck disable=SC2039
+  # shellcheck disable=SC1007
+  local overwrite= backup= skip= action=
 
   if [ -f "$dst" -o -d "$dst" -o -L "$dst" ]
   then

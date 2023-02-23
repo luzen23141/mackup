@@ -2,11 +2,13 @@
 
 echo "Setting up your Mac..."
 
-# 取當前路徑 (絕對路徑)
-cd "$(dirname "$0")" || (echo "Path Error" && exit)
-DOTFILES_ROOT=$(pwd -P)
+export DOTFILES_FOLDER_NAME="dotfiles"
+export DOTFILES=$HOME/$DOTFILES_FOLDER_NAME
+export ZSH="$DOTFILES/plugins/ohmyzsh"
 
-. "$DOTFILES_ROOT"/dotfileFunction.sh
+cd "$(dirname "$0")" || (echo "Path Error" && exit)
+
+. "$DOTFILES"/dotfileFunction.sh
 
 # submodule安裝
 git submodule init
@@ -21,7 +23,7 @@ fi
 
 # Removes .zshrc from $HOME (if it exists) and symlinks the .zshrc file from the .dotfiles
 rm -rf "$HOME"/.zshrc
-ln -s "$DOTFILES_ROOT"/.zshrc "$HOME"/.zshrc
+ln -s "$DOTFILES"/.zshrc "$HOME"/.zshrc
 
 # Update Homebrew recipes
 brew update
@@ -29,7 +31,7 @@ brew update
 # Install all our dependencies with bundle (See Brewfile)
 brew tap homebrew/bundle
 brew install mas
-brew bundle --file "$DOTFILES_ROOT"/Brewfile
+brew bundle --file "$DOTFILES"/Brewfile
 
 # Set default MySQL root password and auth type
 #mysql -u root -e "ALTER USER root@localhost IDENTIFIED WITH mysql_native_password BY 'password'; FLUSH PRIVILEGES;"
@@ -58,7 +60,7 @@ brew bundle --file "$DOTFILES_ROOT"/Brewfile
 
 # 建立軟連結
 info '  Installing dotfiles'
-for src in $(find "$DOTFILES_ROOT/autoLink" -maxdepth 2 -name '*.symlink' -not -path '*.git*')
+for src in $(find "$DOTFILES/autoLink" -maxdepth 2 -name '*.symlink' -not -path '*.git*')
 do
   dst="$HOME/.$(basename "${src%.*}")"
   link_file "$src" "$dst"
@@ -73,4 +75,4 @@ echo "再視情況手動執行 mackup 指令"
 
 # 還未調整設定
 # Set macOS preferences - we will run this last because this will reload the shell
-#source "$DOTFILES_ROOT"/.macos
+#source "$DOTFILES"/.macos
