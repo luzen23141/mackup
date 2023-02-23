@@ -66,9 +66,6 @@ do
   link_file "$src" "$dst"
 done
 
-# 增加建立Mackup prviate設定檔
-create_mackup_private_setting
-
 # 視情況開啟
 mackup -n restore
 echo "再視情況手動執行 mackup 指令"
