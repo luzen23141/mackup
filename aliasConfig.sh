@@ -110,7 +110,7 @@ alias eth="curl https://min-api.cryptocompare.com/data/price\?fsym=ETH\&tsyms=US
 
 alias pa="php artisan"
 
-alias s="cd $DOTFILES/private/sshAlias && sh"
+alias s="cd ~/.config/sshAlias && sh"
 
 alias gito="git open origin master"
 

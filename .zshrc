@@ -37,12 +37,11 @@ export PATH="/usr/local/sbin:$PATH"
 # export PATH=$(dirname $0):${PATH}
 export PATH="$DOTFILES/plugins/gitOpen:$PATH"
 
-
 # 安裝theFuck
 # eval $(thefuck --alias)
 
+# 掛載zsh plugins
 # plugins=(git-open)
-
 
 # 安裝autojump.sh
 [ -f $(brew --prefix)/etc/profile.d/autojump.sh ] && . $(brew --prefix)/etc/profile.d/autojump.sh
