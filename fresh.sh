@@ -70,6 +70,8 @@ done
 mackup -n restore
 echo "再視情況手動執行 mackup 指令"
 
+
+
 # 還未調整設定
 # Set macOS preferences - we will run this last because this will reload the shell
 #source "$DOTFILES"/.macos
