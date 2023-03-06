@@ -87,3 +87,4 @@ cask "surfshark"
 cask "telegram"
 # Desktop client for Telegram messenger
 cask "telegram-desktop"
+mas "LINE", id: 539883307

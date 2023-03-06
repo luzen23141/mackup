@@ -114,5 +114,7 @@ alias s="cd ~/.config/sshAlias && sh"
 
 alias gito="git open origin master"
 
+alias rm="trash"
+
 
 
